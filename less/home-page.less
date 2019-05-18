@@ -6,16 +6,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+   @media @mobile {
+    .layout(column,space-between);
+   }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+        width: 90%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width:100%;
+        
+      }
 
       img {
         border-radius: 10px;
@@ -26,6 +37,12 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile{
+      flex-direction: column-reverse;
+      padding-bottom: 30px;
+      border-bottom: 2px dashed #C0C0C0;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,9 +59,15 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile{
+      width: 100%;
+      margin: 0 auto 30px;
+    }
+
     img {
       border-radius: 10px;
-    }
+
+      }
   }
 
   .content-pick {
@@ -53,9 +76,64 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile{
+      .layout(column,center);
+      padding-top: 30px;
+      border-top: 2px dashed #C0C0C0;
+      display: flex;
+      justify-content: space-between;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+        margin-bottom: 30px;
+      }
     }
   }
+
+  header {
+    .layout(row,center);
+    padding: 20px 0;
+    margin-top:10px;
+    justify-content: space-between; 
+    
+    @media @mobile{
+      .layout(column,center);
+    }
+    
+
+    a {
+      margin-left: 20px;
+      font-size: 1.8rem;
+      text-decoration: none;
+      color: black; 
+    }
+    
+    h1 {
+      @media @mobile{
+        padding-bottom:10px;
+      }
+    }
+    nav a{
+      @media @mobile {
+        padding:10px;
+      }
+    }
+  }
+
+  .welcome {
+    border-bottom: 2px dashed #C0C0C0;
+
+    img {
+      border-top: 2px dashed #C0C0C0;
+      padding-bottom:20px;
+    }
+  }
+
+
 }// home
+
